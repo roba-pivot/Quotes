@@ -1,19 +1,29 @@
 <div class="container">
-       
-          <h3 class="text-center">Use the form below to create a quote</p>
-       <form>
-           <h2>Enter quote</h2>
-        <hr>
-           <textarea type="text" class="textarea"  placeholder="Quote" size="20%">
-        <h2 for ="Description">Describe the quote</h2>
-              <hr>
-            <textarea type="text" class="textarea"  placeholder="Description" size="50%">
-              <h2 for = "name">Authors name</h2>
-              <hr>
-         <input type="text" class="text"  placeholder="Authors name">
-           <br>
-          <h2>Add quote to the list</h2>
-           <input type="button" class="button" value="Add Quotes">
-         </form>
-        </div>
-    </div>   
+          <h3 class="text-center">Use the form below to create a quote</<h3>
+            <form  (ngSubmit) = 'sendForm()'>
+              <div class="form-group">
+                  <label for="author">The Quotes Author</label>
+                  <input type="text" class="form-control" name="author" id="author " placeholder="Authors Name"  [(ngModel)] = 'newQuotes.author' #author = 'ngModel' required>
+                  {{newQuotes.author}}
+                  <div [hidden] = 'author.valid || author.pristine' class="alert alert-info">
+                      <small>Fill the author</small>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="uploadedBy">Your Name</label>
+                  <input type="text" class="form-control" name="uploadedBy" id="uploadedBy" placeholder="Your name ..."  [(ngModel)] = 'newQuotes.uploadedBy' #uploadedBy = 'ngModel' required>
+                  {{newQuotes.uploadedBy}}
+                  <div [hidden] = 'uploadedBy.valid || uploadedBy.pristine' class="alert alert-info">
+                      <small>Fill your Name</small>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="quote">Your Quote</label>
+                  <textarea name="quote" id="quote"  cols="3" rows="4" class="form-control" placeholder='"Write quote"' [(ngModel)] = 'newQuotes.quote' #quote = 'ngModel' required></textarea>
+                  <div [hidden] = 'quote.valid || quote.pristine' class="alert alert-info ">
+                      <small>Quote unavailable</small>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-outline-primary" >Add Quote</button>
+          </form>
+    </div>
