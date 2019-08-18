@@ -1,12 +1,3 @@
-<div class="container ">
- <div class="col">
-    <p>Everyone thinks of changing the world ,but no one thinks of changing himself</p    <h2>Abraham lincoln</h2>
-   <butto>upvote</button><button>downvote</button>
-      <br>
-   <p>The only white man you can trust is a dead white man</p>
-   <h2>Robert Mugabe</h2>
-   <butto>upvote</button><button>downvote</button> 
-      <br>
-   
- </div>   
-</div>
+<p> <span class="dt">Author : {{showDetails.author}}</span> <span id="vote" > <small> <span > <img src="assets/like.png" alt="" (click) = 'addLike(true)'> : {{showDetails.like}}  </span> <span> <img src="assets/dislike.png" alt="" (click) = 'addDisLike(true)'> : {{showDetails.disLike}}</span> </small> </span> </p>
+<p class="dt">Uploaded By : {{showDetails.uploadedBy}} </p>
+<button class="btn btn-danger" (click) = 'deleteDiary(true)'>Delete</button>
