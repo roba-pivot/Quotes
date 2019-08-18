@@ -1,3 +1,40 @@
+# Quotes 
+
+#### Quotes allows its user to add a quote through a form .It will then be displayed to allow other users also to vote on the quotes.
+
+#### August 18th 2019
+
+#### By **[komen225](https://github.com/komen225)**
+
+## Description
+
+Use the form provided and set of instructions to control the functionality of Quotes
+
+## Setup/Installation Requirements
+
+
+* Internet
+* Fork the repo into your github account
+* Install Angular.
+* A browser
+
+## Live link  
+
+https://komen225.github.io/Quotes/
+
+## Known Bugs
+
+No known Bugs
+
+## Support and contact details
+
+Contact Github :komen225
+
+## License
+
+* MIT license 
+Copyright (c) 2019 
+
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
