@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewQuotesComponent } from './view-quotes/view-quotes.component';
 import { OutputComponent } from './output/output.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { Pipe } from '../.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     HomeComponent,
     ViewQuotesComponent,
     OutputComponent,
-    QuoteFormComponent
+    QuoteFormComponent,
+    Pipe
   ],
   imports: [
     BrowserModule,
