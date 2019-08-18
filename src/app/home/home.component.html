@@ -1,27 +1,35 @@
 <div class="jumbotron">
  <h1 class="display-4">Quote app!</h1>
-  <p class="lead"> This app allows user to input their quotes which can be upvoted or downvoted depending with the user .</h3> 
+  <p class="lead"> This app allows user to input their quotes which can be upvoted or downvoted depending with the user .</p>
  <br>
 </div>
 <div class="container ">
  <div class="row">
      <div class="col-md-5">
-        <app-quote-form></app-quote-form>
+         <app-quote-form  (sendData) = 'updateForm($event)'></app-quote-form>
      </div>
      <div class="col-md-7">
-         <app-view-quotes></app-view-quotes>
+       <ul *ngFor = 'let quote of quotesArr;let i = index'>
+                 <li>
+                     <h1><strong>quote</strong></h1>
+                              <span id="qt" >"{{quote.quote}}"</span>  <span id="date"><small>{{quote.postDate|dateCount}} days ago</small> </span><br>
+                             <button type="button" class="btn btn-secondary"  id="btnA"  (click) = 'move(i)'><small>View details</small></button>
+                        <hr>
+                         <h3 class="description" *ngIf = 'quote.show'>
+                             <app-quote-details [showDetails] = 'quote' (willDelete) = 'removeDiary($event,i)' (willAdd) = likeAdd($event,i)  (willDlike) = likeDisAdd($event,i)></app-quote-details>
+                         </h3>
+
+                 </li>
+             </ul>
      </div>
- </div>   
+ </div>
 </div>
 <br>
 <br>
 <div class="container" output>
     <div class="row">
      <div class="col-md-6">
-        <app-output></app-output>  
+        <app-output></app-output>
      </div>
     </div>
 </div>
-
-       
-
