@@ -1,8 +1,8 @@
-import { Pipe } from './.pipe';
+import { DateCountPipe } from './.pipe';
 
-describe('Pipe', () => {
+describe('DateCountpipe', () => {
   it('create an instance', () => {
-    const pipe = new Pipe();
+    const pipe = new DateCountPipe ();
     expect(pipe).toBeTruthy();
   });
 });
