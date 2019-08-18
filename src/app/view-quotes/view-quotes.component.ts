@@ -1,11 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input ,Output , EventEmitter} from '@angular/core';
+import { Quotes } from '../quotes';
 
 @Component({
-  selector: 'app-view-quotes',
-  templateUrl: './view-quotes.component.html',
-  styleUrls: ['./view-quotes.component.css']
+  selector: 'app-quote-details',
+  templateUrl: './quote-details.component.html',
+  styleUrls: ['./quote-details.component.css']
 })
-export class ViewQuotesComponent implements OnInit {
+export class QuoteDetailsComponent implements OnInit {
+
+  @Input () showDetails : Quotes;
+  @Output () willDelete = new EventEmitter<boolean>();
+  @Output () willAdd = new EventEmitter<boolean>();
+  @Output () willDlike = new EventEmitter<boolean>();
+
+
+  addLike (add : boolean){
+    this.willAdd.emit(add);
+  }
+
+  addDisLike (add : boolean){
+    this.willDlike.emit(add);
+  }
+
+  deleteDiary(done : boolean){
+    this.willDelete.emit(done);
+  }
+
 
   constructor() { }
 
