@@ -12,10 +12,10 @@ export class QuotesComponent implements OnInit {
 
   quotesArr : Quotes [] = [
 
-    new Quotes (1,' Robert Frost','komen','Two roads diverged in a wood ,and I --I took the less traveled by ,and that has made all difference.',new Date(2019,6,1),23,6),
-    new Quotes (2,' Maya Angelou','komen','There is no greater agony than bearing an untold story inside you',new Date(2019,6,10),31,8),
-    new Quotes (3,' dr .Dre','komen','Even when i was close to defeat i rose to my feet',new Date(2019,6,15),27,10),
-    new Quotes (4,' Makaveli','komen','Reality is wrong .Dreams are for real',new Date(1995,6,19),13,5),
+    new Quotes (1,' Robert Frost','komen','Two roads diverged in a wood ,and I --I took the less traveled by ,and that has made all difference.',new Date(2019,6,1),999,60),
+    new Quotes (2,' Maya Angelou','komen','There is no greater agony than bearing an untold story inside you',new Date(2019,08,06),333,58),
+    new Quotes (3,' dr .Dre','komen','Even when i was close to defeat i rose to my feet',new Date(2019,6,25),270,10),
+    new Quotes (4,' Makaveli','komen','Reality is wrong .Dreams are for real',new Date(2019,6,04),133,5),
 
   ]
   move(index){
