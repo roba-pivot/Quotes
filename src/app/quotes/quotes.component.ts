@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-quotes',
+  templateUrl: './quotes.component.html',
+  styleUrls: ['./quotes.component.css']
 })
-export class HomeComponent implements OnInit {
+export class QuotesComponent implements OnInit {
 
 
 
@@ -26,18 +26,18 @@ export class HomeComponent implements OnInit {
 
   likeAdd(willAdd,index){
     if( willAdd ){
-      let likeNum = this.quotesArr[index].like;
-      this.quotesArr[index].like = likeNum + 1;
+      let likeNum = this.quotesArr[index].upvote;
+      this.quotesArr[index].upvote = likeNum + 1;
 
-      let most = this.quotesArr[index].like - this.quotesArr[index].disLike;
+      let most = this.quotesArr[index].upvote - this.quotesArr[index].downvote;
 
     }
   }
 
   likeDisAdd(willDlike,index){
     if( willDlike ){
-      let disLikeNum = this.quotesArr[index].disLike;
-      this.quotesArr[index].disLike = disLikeNum + 1;
+      let disLikeNum = this.quotesArr[index].downvote;
+      this.quotesArr[index].downvote = disLikeNum + 1;
 
     }
   }

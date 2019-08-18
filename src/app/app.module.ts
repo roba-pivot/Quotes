@@ -4,22 +4,24 @@ import { FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { QuotesComponent } from './quotes/quotes.component';
 import { ViewQuotesComponent } from './view-quotes/view-quotes.component';
 import { OutputComponent } from './output/output.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { Pipe } from '../.pipe';
+import { DateCountPipe } from '../date-count-pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    QuotesComponent,
     ViewQuotesComponent,
     OutputComponent,
     QuoteFormComponent,
-    Pipe
+    DateCountPipe
   ],
+
   imports: [
+    
     BrowserModule,
     AppRoutingModule
     FormsModule
